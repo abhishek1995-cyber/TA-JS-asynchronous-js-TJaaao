@@ -96,9 +96,10 @@ let newpromise = new Promise((res,rej)=>{
 }).then((data)=>{
     return data.concat("B")
 }).then((data)=>{
-   data.forEach((elm,index,array)=>{
-    array[index] = elm;
-   })
+  return data.reduce((acc,cv,index,)=>{
+    acc[index] = cv
+    return acc
+   },{})
 }).then((data)=> {console.log(data)})
 ```
 
@@ -158,16 +159,19 @@ as we are using .then on promise named first in question 8 we are repeating .the
 - Use `.then` to log the value
 
 ```js
-let promise = Promise.resolve('john');
-promise.then((data)=>{
+let promise = new Promise(res=>{
+    res('john')
+}).then((data)=>{
     return Promise.resolve('Arya');
     
-}).then((data)=>{
-    setTimeout(()=>{
-        return Promise.resolve('Bran');
-    },2000)
-}).then((data)=>{
-    console.log(data)
-})
+}).then((value)=>{
+    return new Promise(resolve=>{
+    setTimeout(()=>
+        resolve('Bran')
+    ,2000)
+    })
+}).then(
+    console.log
+)
 ```
 
