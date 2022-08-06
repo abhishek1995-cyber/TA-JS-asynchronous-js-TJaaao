@@ -27,20 +27,14 @@ let allpromise = Promise.all([one,two,three,four]).then((res)=>{
 ```
 - Create a list of 5 Github usernames in an array and using `Promise.all` get access to the data of each user from GitHub API. Log the number of followers of each user.
 ```js
-const userName = [
-  'abhishek1995-cyber',
-  'RahhulMandyal1',
-  'adityag8686',
-  'ravikr9102',
-  'vishalgoswami12'
-]
+const userName = ['abhishek1995-cyber','RahhulMandyal1','adityag8686','ravikr9102','vishalgoswami12']
 
 let usersinfo = userName.map((user) => {
    return fetch(`https://api.github.com/users/${user}`)
-   .then((res) => {
-   console.log(res)
-    return res.json()
-    })
+   .then((res) => 
+  //  console.log(res)
+    res.json()
+    )
 })
 
 Promise.all(users).then((data)=>{
