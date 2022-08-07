@@ -1,0 +1,202 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  html {
+    font-size: 62.5%;
+  }
+  
+  section {
+    background: linear-gradient(to right, rgb(120, 88, 168), #687de5);
+    min-height: 100vh;
+    padding: 2rem 9%;
+  }
+  
+  .card-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .card {
+    flex: 0 1 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    background-color: #fff;
+    padding: 2rem;
+    border: 1px dashed crimson;
+    margin-bottom: 2rem;
+  }
+  h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 2rem 0;
+  }
+  p {
+    font-size: 1.4rem;
+    margin: 0 0 2rem 0;
+  }
+  .btn {
+    display: inline-block;
+    padding: 0.8rem;
+    background-color: #000;
+    font-size: 1.2rem;
+    color: #fff;
+    border-radius: 0.6rem;
+  }
+  
+  ul {
+    margin: 2rem 0;
+    font-size: 1.3rem;
+    border-bottom: 2px solid #333;
+    padding: 1rem;
+  }
+  li {
+    list-style-type: none;
+  }
+  
+  .characterContainer {
+    position: relative;
+    width: 100%;
+    background-color: #3b898a;
+    display: none;
+  }
+  .characters-heading {
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .characterContainer span {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+  /* Styling the spinner */
+  header {
+    width: 100%;
+    margin: 2rem 0;
+    text-align: center;
+  }
+  header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+  }
+  
+  section {
+    position: relative;
+  }
+  
+  .lds-roller {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    width: 80px !important;
+    height: 80px !important;
+    z-index: 1000;
+    display: none;
+  }
+  
+  .lds-roller div {
+    animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    transform-origin: 40px 40px;
+  }
+  
+  .lds-roller div:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #000;
+    margin: -4px 0 0 -4px;
+  }
+  
+  .lds-roller div:nth-child(1) {
+    animation-delay: -0.036s;
+  }
+  
+  .lds-roller div:nth-child(1):after {
+    top: 63px;
+    left: 63px;
+  }
+  
+  .lds-roller div:nth-child(2) {
+    animation-delay: -0.072s;
+  }
+  
+  .lds-roller div:nth-child(2):after {
+    top: 68px;
+    left: 56px;
+  }
+  
+  .lds-roller div:nth-child(3) {
+    animation-delay: -0.108s;
+  }
+  
+  .lds-roller div:nth-child(3):after {
+    top: 71px;
+    left: 48px;
+  }
+  
+  .lds-roller div:nth-child(4) {
+    animation-delay: -0.144s;
+  }
+  
+  .lds-roller div:nth-child(4):after {
+    top: 72px;
+    left: 40px;
+  }
+  
+  .lds-roller div:nth-child(5) {
+    animation-delay: -0.18s;
+  }
+  
+  .lds-roller div:nth-child(5):after {
+    top: 71px;
+    left: 32px;
+  }
+  
+  .lds-roller div:nth-child(6) {
+    animation-delay: -0.216s;
+  }
+  
+  .lds-roller div:nth-child(6):after {
+    top: 68px;
+    left: 24px;
+  }
+  
+  .lds-roller div:nth-child(7) {
+    animation-delay: -0.252s;
+  }
+  
+  .lds-roller div:nth-child(7):after {
+    top: 63px;
+    left: 17px;
+  }
+  
+  .lds-roller div:nth-child(8) {
+    animation-delay: -0.288s;
+  }
+  
+  .lds-roller div:nth-child(8):after {
+    top: 56px;
+    left: 12px;
+  }
+  
+  @keyframes lds-roller {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  
